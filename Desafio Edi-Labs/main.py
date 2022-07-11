@@ -11,6 +11,10 @@ estados = json.loads(json_data.text)
 listaEstados = []
 cnt = Counter()
 
+newpath = r'C:\Program Files\arbitrary' 
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
+
 for estadoJson in estados: 
     listaEstados.append(estado(**estadoJson))
     
